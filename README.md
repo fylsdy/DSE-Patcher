@@ -18,12 +18,16 @@ TimeoutSeconds=60
 
 Extract the files to the game directory, then run DSE-Patcher.exe to enter the game. For different games, edit DSE-Patcher.ini and modify the corresponding LaunchExe= and TargetProcess= accordingly.
 Below is an example using the DSE-Patcher.ini for Stellar Blade:
+
 [Settings]
-The launch file to run after disabling DSE (relative to DSE-Patcher.exe or an absolute path)
+#The launch file to run after disabling DSE (relative to DSE-Patcher.exe or an absolute path)
 LaunchExe=steamclient_loader_x64.exe
-The game process name to monitor. Once the process is detected running, DSE will be automatically restored (Note: This is the original game's exe, which is usually not the same as the launch file. For example, for Resident Evil 9, it would be re9.exe)
+
+#The game process name to monitor. Once the process is detected running, DSE will be automatically restored (Note: This is the original game's exe, which is usually not the same as the launch file. For example, for Resident Evil 9, it would be re9.exe)
 TargetProcess=SB-Win64-Shipping.exe
-Frequency to check for the target game process, in milliseconds
+
+#Frequency to check for the target game process, in milliseconds
 PollIntervalMs=1000
-If the target game process cannot be detected, DSE will be automatically restored after the following time, in seconds. 0 means no automatic restoration.
+
+#If the target game process cannot be detected, DSE will be automatically restored after the following time, in seconds. 0 means no automatic restoration.
 TimeoutSeconds=60
